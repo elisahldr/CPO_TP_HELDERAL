@@ -47,8 +47,10 @@ if (operateur==4)
     result=operande1/operande2;
 if (operateur==5)
     result=operande1%operande2;
+
 System.out.println("Le résultat est"+result);
-    
+  
+
 
     
     
