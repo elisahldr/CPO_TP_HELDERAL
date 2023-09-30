@@ -23,10 +23,11 @@ public class TP1_convertisseur_HELDERAL {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
-System.out.println("Bonjour, saisissez une temperature à convertir:");
+System.out.println("Bonjour, saisissez une temperature a convertir:");
 double variable1=sc.nextDouble();
 System.out.println("Temperature saisie: "+variable1);
-System.out.println("Saisissez la conersion souaitée \n 1-Celcius vers Kelvin \n 2-Kelvin vers Celcius \n 3-Farenheit vers Celcius \n 4-Celcius vers Farenheit \n 5-Kelvin vers Farenheit \n 6- Farenheit vers Celcius ");
+System.out.println("Saisissez la conersion souaitee \n 1-Celcius vers Kelvin \n 2-Kelvin vers Celcius \n 3-Farenheit vers Celcius \n 4-Celcius vers Farenheit \n 5-Kelvin vers Farenheit \n 6- Farenheit vers Celcius ");
+
 int saisiemenu=sc.nextInt();
 if (saisiemenu==1){
     double a=CelciusVersKelvin(variable1);
@@ -46,42 +47,11 @@ if (saisiemenu==1){
 }if (saisiemenu==6){
     double f=FarenheitKelvin(variable1);
     System.out.println(f);
-}else 
-    System.out.println("Saisissez un chiffre entre 1 et 5");
+}
 
     
 }
 
-    private static double CelciusVersKelvin(double variable1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private static double KelvinversCelcius(double variable1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private static double FarenheitversCelcius(double variable1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private static double CelciusversFarenheit(double variable1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private static double KelvinversFarenheit(double variable1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private static double FarenheitKelvin(double variable1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-
-
-
-
-
-    }
     public static double CelciusVersKelvin (double tCelcius){
     double tKelvin=273.15+tCelcius;
     return tKelvin; 
