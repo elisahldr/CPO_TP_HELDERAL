@@ -31,22 +31,22 @@ System.out.println("Saisissez la conersion souaitee \n 1-Celcius vers Kelvin \n 
 int saisiemenu=sc.nextInt();
 if (saisiemenu==1){
     double a=CelciusVersKelvin(variable1);
-    System.out.println(a);
+    System.out.println(a+"K");
 }if (saisiemenu==2){
     double b=KelvinversCelcius(variable1);
-    System.out.println(b);
+    System.out.println(b+"C");
 }if (saisiemenu==3){
     double c=FarenheitversCelcius(variable1);
-    System.out.println(c);
+    System.out.println(c+"C");
 }if (saisiemenu==4){
     double d=CelciusversFarenheit(variable1);
-    System.out.println(d);
+    System.out.println(d+"F");
 }if (saisiemenu==5){
     double e=KelvinversFarenheit(variable1);
-    System.out.println(e);
+    System.out.println(e+"F");
 }if (saisiemenu==6){
     double f=FarenheitKelvin(variable1);
-    System.out.println(f);
+    System.out.println(f+"K");
 }
 
     
