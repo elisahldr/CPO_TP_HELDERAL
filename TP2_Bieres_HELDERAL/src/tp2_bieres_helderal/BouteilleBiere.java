@@ -34,7 +34,7 @@ public void Decapsuler() {
     if (ouverte==false) {
         ouverte=true;
     }else {
-        System.out.println("Erreur: biere deja ouverte.");
+        System.out.println("Erreur, biere deja ouverte.");
     }
 }
 
