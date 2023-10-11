@@ -76,7 +76,7 @@ if (saisiemenu==1){
    }
     public static double FarenheitKelvin (double tFarenheit){
     double tKelvin=(tFarenheit+459.67)/1.8;
-    return tFarenheit;
+    return tKelvin;
     }
 }
    
