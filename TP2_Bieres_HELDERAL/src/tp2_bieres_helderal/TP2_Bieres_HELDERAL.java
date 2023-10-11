@@ -26,6 +26,7 @@ public class TP2_Bieres_HELDERAL {
                 
       BouteilleBiere quatreBiere = new BouteilleBiere("Elisa",15.2,"J'ai fini mon etude de doc");
       quatreBiere.lireEtiquette();
+      
         
         
      
