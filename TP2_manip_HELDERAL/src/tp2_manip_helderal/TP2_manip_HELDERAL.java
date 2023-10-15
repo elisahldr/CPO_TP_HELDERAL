@@ -1,6 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+
+/* Helderal
+*TP2
+*TDA2
+*apprendre à utiliser java
+*8 octobre 2023
+
+
+package tp2_manip_helderal;
  */
 package tp2_manip_helderal;
 
