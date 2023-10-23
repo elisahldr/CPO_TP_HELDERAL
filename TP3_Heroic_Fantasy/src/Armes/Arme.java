@@ -5,7 +5,7 @@
 *apprendre à utiliser java
 *8 octobre 2023
  */
-package tp3_heroic_fantasy;
+package Armes;
 
 /**
  *

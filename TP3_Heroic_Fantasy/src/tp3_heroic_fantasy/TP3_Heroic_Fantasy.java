@@ -11,15 +11,19 @@
  */
 package tp3_heroic_fantasy;
 
+import Armes.Arme;
+import Armes.Epee;
+import Armes.Baton;
+import java.util.ArrayList;
+
 /**
  *
  * @author elisa
  */
 public class TP3_Heroic_Fantasy {
 
-    /**
-     * @param args the command line arguments
-     */
+
+  
     public static void main(String[] args) {
         // TODO code application logic here
         Epee epee1 = new Epee("Excalibur", 7, 5);
@@ -35,6 +39,39 @@ public class TP3_Heroic_Fantasy {
         System.out.println("\nInformations sur le premier baton : " +baton1);
 
         System.out.println("\nInformations sur le deuxieme baton : " +baton2);
+        
+        ArrayList<Arme> TableauArmes = new ArrayList<>();
+        TableauArmes.add(epee1);
+        TableauArmes.add(epee2);
+        TableauArmes.add(baton1);
+        TableauArmes.add(baton2);
+        
+        for (int i = 0; i <TableauArmes.size(); i++) {
+            System.out.println(TableauArmes.get(i));
+            
+            Guerrier guerrier1= new Guerrier ("Conan ",78,"pieds");
+            Guerrier guerrier2= new Guerrier ("Lannister",45,"cheval");
+            
+           Magicien magicien1= new Magicien ("Gandalf",65,"confirme");
+           Magicien magicien2= new Magicien ("Garcimore",44,"novice");
+           
+            
+            System.out.println(guerrier1);
+
+        System.out.println(guerrier2);
+
+        System.out.println(magicien1);
+
+        System.out.println(magicien2);
+        
+        
+            
+            for (int i = 0; i< TableauPerso.size(); i ++) {
+                System.out.println(TableauPerso.get(i));
+            }
+            
+                    
+        }
 
         
         
