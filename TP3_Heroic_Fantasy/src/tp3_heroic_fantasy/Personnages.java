@@ -4,26 +4,49 @@
  */
 package tp3_heroic_fantasy;
 
+import Armes.Arme;
+import java.util.ArrayList;
+import java.util.Vector;
+
 /**
  *
  * @author elisa
  */
 public abstract class Personnages {
-   
-    String nom; 
-    int niveauDeVie=100;
-    
-   public Personnages (String Nom, int NiveauDeVie) {
-       nom=Nom;
-       niveauDeVie=NiveauDeVie;
-       
-   }
+
+    String nom;
+    int niveauDeVie = 100;
+    String armesPortees = null;
+
+    ArrayList<Personnages> armesPossedees = new ArrayList<>();
+
+    public boolean ajouterUneArme(Personnages armeAjouter) {
+        if (this.armesPossedees.size() == 5) {
+            return false;
+        } else {
+            this.armesPossedees.add(armeAjouter);
+            return true;
+        }
+    }
+
+    public void Arme_en_Main() {
+        System.out.println("Quelle armes voulez-vous? \n");
+        for (int i = 0; i < this.armesPossedees.size(); i++) {
+            System.out.println("(" + i + ") " + this.armesPossedees.get(i));
+        }
+    }
+
+    public Personnages(String Nom, int NiveauDeVie) {
+        nom = Nom;
+        niveauDeVie = NiveauDeVie;
+
+    }
 
     @Override
     public String toString() {
-        String chaine = nom+""+niveauDeVie;
+        String chaine = nom + "" + niveauDeVie;
         return chaine;
-        
+
     }
-    
+
 }
