@@ -15,7 +15,7 @@ public abstract class Arme {
     String nom; 
     int niveauAttaque=100;
     
-   public Arme(String Nom, int NiveauAttaque) {
+   public  Arme(String Nom, int NiveauAttaque) {
        nom=Nom;
        niveauAttaque=NiveauAttaque;
        
@@ -23,8 +23,8 @@ public abstract class Arme {
     
     @Override
     public String toString() {
-        String chaine = nom+"Niveau de l'attaque : "+niveauAttaque;
-        return chaine;
+        return nom+"Niveau de l'attaque : "+niveauAttaque;
+       
         
     }
    

@@ -17,6 +17,7 @@ public abstract class Personnages {
     String nom;
     int niveauDeVie = 100;
     String armesPortees = null;
+    int nbPersos;
 
     ArrayList<Arme> armesPossedees = new ArrayList<>();
 
@@ -39,7 +40,30 @@ public abstract class Personnages {
     public Personnages(String Nom, int NiveauDeVie) {
         nom = Nom;
         niveauDeVie = NiveauDeVie;
+        nbPersos += 1;
 
+    }
+
+    public void finale() {
+        nbPersos = nbPersos - 1;
+    }
+
+    public void fatigue() {
+        niveauDeVie = niveauDeVie - 10;
+    }
+
+    public boolean enVie() {
+        if (niveauDeVie > 0) {
+            System.out.println(nom + " est toujours en vie");
+            return true;
+        } else {
+            System.out.println(nom + " est décédé");
+            return false;
+
+        }
+    }
+    public void attaque (int points) {
+        niveauDeVie=niveauDeVie-points;
     }
 
     @Override
@@ -49,4 +73,5 @@ public abstract class Personnages {
 
     }
 
+   
 }

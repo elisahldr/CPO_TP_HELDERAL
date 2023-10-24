@@ -14,7 +14,7 @@ import Armes.Arme;
  * @author elisa
  */
 public class Baton extends Arme {
-   int AgeBaton;
+   public int AgeBaton;
      public Baton(String nom, int niveauAttaque, int AgeBaton) {
         super(nom, niveauAttaque);
         this.AgeBaton=AgeBaton;
