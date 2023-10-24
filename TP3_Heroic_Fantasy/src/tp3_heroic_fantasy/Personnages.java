@@ -18,9 +18,9 @@ public abstract class Personnages {
     int niveauDeVie = 100;
     String armesPortees = null;
 
-    ArrayList<Personnages> armesPossedees = new ArrayList<>();
+    ArrayList<Arme> armesPossedees = new ArrayList<>();
 
-    public boolean ajouterUneArme(Personnages armeAjouter) {
+    public boolean ajouterUneArme(Arme armeAjouter) {
         if (this.armesPossedees.size() == 5) {
             return false;
         } else {
@@ -44,7 +44,7 @@ public abstract class Personnages {
 
     @Override
     public String toString() {
-        String chaine = nom + "" + niveauDeVie;
+        String chaine = nom + "Niveau de vie : " + niveauDeVie;
         return chaine;
 
     }

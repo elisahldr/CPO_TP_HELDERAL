@@ -65,12 +65,11 @@ public class TP3_Heroic_Fantasy {
         System.out.println(magicien2);
         
         
-            
-            for (int i = 0; i< TableauPerso.size(); i ++) {
-                System.out.println(TableauPerso.get(i));
+          ArrayList<Arme> TableauPersos = new ArrayList<>();
+            for (int j = 0; j< TableauPersos.size(); j ++) {
+                System.out.println(TableauPersos.get(j));
             }
             
-                    
         }
 
         
