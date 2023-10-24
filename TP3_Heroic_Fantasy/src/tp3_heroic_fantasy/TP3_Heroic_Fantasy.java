@@ -64,6 +64,10 @@ public class TP3_Heroic_Fantasy {
 
         System.out.println(magicien2);
         
+        magicien1.ajouterUneArme(epee1);
+      magicien1.ajouterUneArme(baton1);
+      magicien1.equiperArme(baton1);
+        
         
           ArrayList<Arme> TableauPersos = new ArrayList<>();
             for (int j = 0; j< TableauPersos.size(); j ++) {
