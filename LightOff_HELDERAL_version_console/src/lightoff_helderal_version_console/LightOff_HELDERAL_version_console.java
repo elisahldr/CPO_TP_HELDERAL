@@ -14,33 +14,46 @@ package lightoff_helderal_version_console;
 public class LightOff_HELDERAL_version_console {
 
    
-    public static void main(String[] args) {
-  
-        CelluleLumineuse cellule1 = new CelluleLumineuse(true);
-          cellule1.activerCellule();
-        System.out.println("État initial de cellule1 : " + cellule1);
+ public static void main(String[] args) {
+        // Créez une grille de jeu avec 4 lignes et 4 colonnes
+        GrilleDeJeu grille = new GrilleDeJeu(4, 4);
 
+        // Affichez l'état initial de la grille
+        System.out.println("État initial de la grille :");
+        System.out.println(grille.toString());
 
-        cellule1.eteindreCellule();
-        System.out.println("Nouvel état de cellule1 : " + cellule1);
+        // Mélangez la grille en effectuant 10 tours
+        grille.melangerMatriceAleatoirement(10);
+        System.out.println("Grille après mélange :");
+        System.out.println(grille.toString());
 
- 
-        CelluleLumineuse cellule2 = new CelluleLumineuse(false);
-        System.out.println("État initial de cellule2 : " + cellule2);
-        
-    
-        cellule2.activerCellule();
-        System.out.println("Nouvel état de cellule2 : " + cellule2);
+        // Active une ligne, colonne ou diagonale aléatoirement
+        grille.activerLigneColonneOuDiagonaleAleatoire();
+        System.out.println("Grille après activation aléatoire :");
+        System.out.println(grille.toString());
 
-       
-        boolean estEteinte = cellule2.estEteint();
-        System.out.println("La cellule2 est éteinte : " + estEteinte);
+        // Active la diagonale descendante
+        grille.activerDiagonaleDescendante();
+        System.out.println("Grille après activation de la diagonale descendante :");
+        System.out.println(grille.toString());
 
+        // Active la diagonale montante
+        grille.activerDiagonaleMontante();
+        System.out.println("Grille après activation de la diagonale montante :");
+        System.out.println(grille.toString());
 
-        boolean etatCellule1 = cellule1.getEtat();
-        System.out.println("État de cellule1 : " + etatCellule1);
+        // Active la deuxième ligne (l'indice 1)
+        grille.activerLigneDeCellules(1);
+        System.out.println("Grille après activation de la deuxième ligne :");
+        System.out.println(grille.toString());
+
+        // Active la troisième colonne (l'indice 2)
+        grille.activerColonneDeCellules(2);
+        System.out.println("Grille après activation de la troisième colonne :");
+        System.out.println(grille.toString());
+
+        // Vérifie si toutes les cellules sont éteintes
+        boolean toutesEteintes = grille.cellulesToutesEteintes();
+        System.out.println("Toutes les cellules sont éteintes : " + toutesEteintes);
     }
 }
-
-
-        

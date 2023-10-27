@@ -26,6 +26,13 @@ public class CelluleLumineuse {
        this.etat = false;
     }
 
+    CelluleLumineuse() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+
+
+
     /**
      *
      * Inverse l'état de la cellule lumineuse. Si la cellule est actuellement
