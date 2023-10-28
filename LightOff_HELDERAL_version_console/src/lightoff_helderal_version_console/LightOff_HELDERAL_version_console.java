@@ -13,14 +13,10 @@ package lightoff_helderal_version_console;
  */
 public class LightOff_HELDERAL_version_console {
 
-   public static void main(String[] args) {
-         Partie partie = new Partie();
-        
-        
+    public static void main(String[] args) {
+        Partie partie = new Partie();
         partie.initialiserPartie();
-        
-       
         partie.lancerPartie();
     }
-    
+
 }
