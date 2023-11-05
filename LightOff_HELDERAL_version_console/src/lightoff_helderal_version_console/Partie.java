@@ -17,21 +17,68 @@ public class Partie {
 
     private GrilleDeJeu grille;
     private int nbCoups;
+    private int nbCoupsMax;
+
+    public Partie() {
+        choisirNiveauDifficulte();
+        grille = new GrilleDeJeu(4, 4);
+        nbCoups = 0;
+
+    }
 
     /**
      * Constructeur de la classe Partie. Crée une nouvelle partie en
      * initialisant la grille de jeu et le compteur de coups
      */
-    public Partie() {
-        grille = new GrilleDeJeu(4, 4);
-        nbCoups = 0;
+    public enum NiveauDifficulte {
+        FACILE, MOYEN, DIFFICILE
     }
+
+    private NiveauDifficulte niveauDifficulte;
 
     /**
      * Initialise une nouvelle partie du jeu LightOff en mélangeant
      * aléatoirement la grille.
      *
      */
+    public void choisirNiveauDifficulte() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choisissez un niveau de difficulté :");
+        System.out.println("1) Facile");
+        System.out.println("2) Moyen");
+        System.out.println("3) Difficile");
+        System.out.print("Entrez le numéro du niveau de difficulté : ");
+        int choix = scanner.nextInt();
+
+        switch (choix) {
+            case 1:
+                niveauDifficulte = NiveauDifficulte.FACILE;
+                break;
+            case 2:
+                niveauDifficulte = NiveauDifficulte.MOYEN;
+                break;
+            case 3:
+                niveauDifficulte = NiveauDifficulte.DIFFICILE;
+                break;
+            default:
+                System.out.println("Choix invalide. Niveau moyen choisi par défaut.");
+                niveauDifficulte = NiveauDifficulte.MOYEN;
+                break;
+        }
+    }
+
+    public Partie(NiveauDifficulte niveauDifficulte) {
+        this.niveauDifficulte = niveauDifficulte;
+
+        if (niveauDifficulte == NiveauDifficulte.FACILE) {
+            nbCoupsMax = Integer.MAX_VALUE; // Nombre de coups illimité
+        } else if (niveauDifficulte == NiveauDifficulte.MOYEN) {
+            nbCoupsMax = 20;
+        } else if (niveauDifficulte == NiveauDifficulte.DIFFICILE) {
+            nbCoupsMax = 8;
+        }
+    }
+
     public void initialiserPartie() {
         grille.melangerMatriceAleatoirement(4);
     }
@@ -44,6 +91,15 @@ public class Partie {
         System.out.println("Bienvenue dans le jeu LightOff!");
 
         while (grille.cellulesToutesEteintes() != true) {
+            if (grille.cellulesToutesEteintes()) {
+                System.out.println("Félicitations! Vous avez éteint toutes les cellules en " + nbCoups + " coups.");
+                break;
+            }
+
+            if (nbCoups > nbCoupsMax) {
+                System.out.println("Nombre maximum de coups atteint. Vous avez perdu.");
+                break;
+            }
             System.out.println(grille);
             System.out.println("Choisissez l'action :");
             System.out.println("1) Activer une ligne");
