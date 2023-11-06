@@ -14,10 +14,10 @@ import java.util.Scanner;
  * @author elisa
  */
 public class Partie {
-
-    private GrilleDeJeu grille;
-    private int nbCoups;
-
+GrilleDeJeu grille;
+int nbCoups;
+    
+ 
     /**
      * Constructeur de la classe Partie. Crée une nouvelle partie en
      * initialisant la grille de jeu et le compteur de coups
